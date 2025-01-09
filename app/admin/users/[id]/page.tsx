@@ -23,9 +23,10 @@ const AdminUserUpdatePage = async (props: {
   return (
     <div className="space-y-8 max-w-lg mx-auto">
       <h1 className="h2-bold">Update User</h1>
-      {/**Will try to fix this ts error later */}
-      {/* eslint-disable @typescript-eslint/ban-ts-comment */}
-      <UpdateUserForm user={user} />
+
+      <UpdateUserForm
+        user={user as { email: string; name: string; id: string; role: string }}
+      />
     </div>
   );
 };
