@@ -24,7 +24,7 @@ const AdminUserUpdatePage = async (props: {
     <div className="space-y-8 max-w-lg mx-auto">
       <h1 className="h2-bold">Update User</h1>
       {/**Will try to fix this ts error later */}
-      //eslint-disable @typescript-eslint/ban-ts-comment
+      {/* eslint-disable @typescript-eslint/ban-ts-comment */}
       <UpdateUserForm user={user} />
     </div>
   );
