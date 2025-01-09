@@ -5,6 +5,21 @@ export const SERVER_URL =
 
 export const LATEST_PRODUCTS_LIMIT = 4;
 
+export const productDefaultValues = {
+  name: "",
+  slug: "",
+  category: "",
+  images: [],
+  brand: "",
+  description: "",
+  price: "0",
+  stock: 0,
+  rating: "0",
+  numReviews: "0",
+  isFeatured: false,
+  banner: null,
+};
+
 export const signInDefaultValues = {
   email: "",
   password: "",
