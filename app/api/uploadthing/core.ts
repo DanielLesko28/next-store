@@ -13,7 +13,7 @@ export const ourFileRouter = {
       if (!session) throw new UploadThingError("Unauthorized");
       return { userId: session?.user?.id };
     })
-    //@typescript-eslint/no-explicit-any
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     .onUploadComplete(async ({ metadata }: { metadata: any }) => {
       return { uploadedBy: metadata.userId };
     }),
