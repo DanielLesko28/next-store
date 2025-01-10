@@ -248,14 +248,7 @@ const ProductForm = ({
           <FormField
             control={form.control}
             name="images"
-            render={({
-              field,
-            }: {
-              field: ControllerRenderProps<
-                z.infer<typeof insertProductSchema>,
-                "images"
-              >;
-            }) => (
+            render={() => (
               <FormItem className="w-full">
                 <FormLabel>Images</FormLabel>
                 <Card>
