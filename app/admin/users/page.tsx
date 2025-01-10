@@ -12,6 +12,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import DeleteDialog from "@/components/shared/delete-dialog";
+import Pagination from "@/components/shared/pagination";
 
 const AdminUserPage = async (props: {
   searchParams: Promise<{
@@ -72,9 +73,9 @@ const AdminUserPage = async (props: {
             ))}
           </TableBody>
         </Table>
-        {/* {users.totalPages > 1 && (
+        {users.totalPages > 1 && (
           <Pagination page={Number(page) || 1} totalPages={users?.totalPages} />
-        )} */}
+        )}
       </div>
     </div>
   );

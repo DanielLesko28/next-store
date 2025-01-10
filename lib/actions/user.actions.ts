@@ -29,7 +29,7 @@ export async function signInWithCredentials(
     return { success: true, message: "User signed in successfully" };
   } catch (e) {
     if (isRedirectError(e)) {
-      throw Error;
+      throw e;
     }
 
     return { success: false, message: "Email or password are incorrect" };
@@ -66,7 +66,7 @@ export async function signUpUser(prevState: unknown, formData: FormData) {
     return { success: true, message: "User registered successfully" };
   } catch (e) {
     if (isRedirectError(e)) {
-      throw Error;
+      throw e;
     }
 
     return { success: false, message: formatError(e) };
